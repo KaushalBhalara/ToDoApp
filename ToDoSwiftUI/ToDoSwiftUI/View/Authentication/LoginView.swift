@@ -11,6 +11,9 @@ struct LoginView: View {
     var body: some View {
         ZStack{
             BackgroundGradiantView()
+            VStack{
+                LogoView()
+            }
         }
         
     }

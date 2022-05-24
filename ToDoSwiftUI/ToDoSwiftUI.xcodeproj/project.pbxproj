@@ -14,6 +14,7 @@
 		D3B6A3C3283CEB97006DE578 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6A3C2283CEB97006DE578 /* LoginView.swift */; };
 		D3B6A3C5283CEBB3006DE578 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6A3C4283CEBB3006DE578 /* SignUpView.swift */; };
 		D3B6A3C7283CECDA006DE578 /* BackgroundGradiantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6A3C6283CECDA006DE578 /* BackgroundGradiantView.swift */; };
+		D3B6A3C9283CEF5C006DE578 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6A3C8283CEF5C006DE578 /* LogoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		D3B6A3C2283CEB97006DE578 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D3B6A3C4283CEBB3006DE578 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		D3B6A3C6283CECDA006DE578 /* BackgroundGradiantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradiantView.swift; sourceTree = "<group>"; };
+		D3B6A3C8283CEF5C006DE578 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				D3B6A3C6283CECDA006DE578 /* BackgroundGradiantView.swift */,
+				D3B6A3C8283CEF5C006DE578 /* LogoView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3B6A3C7283CECDA006DE578 /* BackgroundGradiantView.swift in Sources */,
+				D3B6A3C9283CEF5C006DE578 /* LogoView.swift in Sources */,
 				D3B6A3C5283CEBB3006DE578 /* SignUpView.swift in Sources */,
 				D3B6A3C3283CEB97006DE578 /* LoginView.swift in Sources */,
 				D3B6A3B2283CE5C4006DE578 /* ContentView.swift in Sources */,
