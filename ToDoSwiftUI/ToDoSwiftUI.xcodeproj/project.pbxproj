@@ -11,6 +11,9 @@
 		D3B6A3B2283CE5C4006DE578 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6A3B1283CE5C4006DE578 /* ContentView.swift */; };
 		D3B6A3B4283CE5C7006DE578 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3B6A3B3283CE5C7006DE578 /* Assets.xcassets */; };
 		D3B6A3B7283CE5C7006DE578 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3B6A3B6283CE5C7006DE578 /* Preview Assets.xcassets */; };
+		D3B6A3C3283CEB97006DE578 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6A3C2283CEB97006DE578 /* LoginView.swift */; };
+		D3B6A3C5283CEBB3006DE578 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6A3C4283CEBB3006DE578 /* SignUpView.swift */; };
+		D3B6A3C7283CECDA006DE578 /* BackgroundGradiantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6A3C6283CECDA006DE578 /* BackgroundGradiantView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		D3B6A3B1283CE5C4006DE578 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D3B6A3B3283CE5C7006DE578 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3B6A3B6283CE5C7006DE578 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D3B6A3C2283CEB97006DE578 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D3B6A3C4283CEBB3006DE578 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		D3B6A3C6283CECDA006DE578 /* BackgroundGradiantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradiantView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,9 @@
 		D3B6A3AE283CE5C4006DE578 /* ToDoSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				D3B6A3BD283CEAB1006DE578 /* Model */,
+				D3B6A3BE283CEABB006DE578 /* View */,
+				D3B6A3BF283CEAC3006DE578 /* ViewModel */,
 				D3B6A3AF283CE5C4006DE578 /* ToDoSwiftUIApp.swift */,
 				D3B6A3B1283CE5C4006DE578 /* ContentView.swift */,
 				D3B6A3B3283CE5C7006DE578 /* Assets.xcassets */,
@@ -65,6 +74,46 @@
 				D3B6A3B6283CE5C7006DE578 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D3B6A3BD283CEAB1006DE578 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3B6A3BE283CEABB006DE578 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3B6A3C1283CEB7B006DE578 /* Authentication */,
+				D3B6A3C0283CEB70006DE578 /* Utils */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D3B6A3BF283CEAC3006DE578 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D3B6A3C0283CEB70006DE578 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D3B6A3C6283CECDA006DE578 /* BackgroundGradiantView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D3B6A3C1283CEB7B006DE578 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D3B6A3C2283CEB97006DE578 /* LoginView.swift */,
+				D3B6A3C4283CEBB3006DE578 /* SignUpView.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +186,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B6A3C7283CECDA006DE578 /* BackgroundGradiantView.swift in Sources */,
+				D3B6A3C5283CEBB3006DE578 /* SignUpView.swift in Sources */,
+				D3B6A3C3283CEB97006DE578 /* LoginView.swift in Sources */,
 				D3B6A3B2283CE5C4006DE578 /* ContentView.swift in Sources */,
 				D3B6A3B0283CE5C4006DE578 /* ToDoSwiftUIApp.swift in Sources */,
 			);
