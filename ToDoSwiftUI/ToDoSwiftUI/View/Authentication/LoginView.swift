@@ -13,36 +13,62 @@ struct LoginView: View {
     @State var password = ""
     
     var body: some View {
-        ZStack{
-            BackgroundGradiantView()
-            VStack{
-                LogoView()
-                Spacer()
-                    .frame(height: 25)
-                VStack(spacing: 20){
-                    EmailTextField(text: $email)
-                    
-                    PasswordTextField(text: $password, placeholder: "Password")
-                }
-                .padding(.horizontal, 25)
-                
-                HStack {
+        NavigationView {
+            ZStack{
+                BackgroundGradiantView()
+                VStack{
+                    LogoView()
                     Spacer()
-                    Button {
+                        .frame(height: 25)
+                    VStack(spacing: 20){
+                        EmailTextField(text: $email)
                         
-                    } label: {
-                        Text("Forgot Password")
-                            .foregroundColor(.white)
-                            .font(.system(size: 15, weight: .bold))
-                            .padding(5)
-                            .padding(.trailing, 25)
-                        
+                        PasswordTextField(text: $password, placeholder: "Password")
                     }
-                }
-                Spacer()
-                    .frame(height: 50)
-                AuthenticationButtonView(text: "Sign In")
+                    .padding(.horizontal, 25)
+                    
+                    HStack {
+                        Spacer()
+                        Button {
+                            
+                        } label: {
+                            Text("Forgot Password")
+                                .foregroundColor(.white)
+                                .font(.system(size: 15, weight: .bold))
+                                .padding(5)
+                                .padding(.trailing, 25)
+                            
+                        }
+                    }
+                    Spacer()
+                        .frame(height: 50)
+                    AuthenticationButtonView(text: "Sign In")
+                    
+                    NavigationLink(destination: SignUpView()
+                        .navigationBarHidden(true)) {
+                
+                  
+                           
+                            HStack(){
+                           
+                                Text("Don't have a account?")
+                                    .font(.system(size: 15))
+                                Text("Sign Up")
+                                    .font(.system(size: 15))
+                                    .fontWeight(.bold)
+                                
+                            }
+                            .foregroundColor(.white)
+                            .padding()
+                            
+                            
+                        
+                     
+                    }
 
+
+                }
+                .padding(.top, -100)
             }
         }
         
@@ -51,6 +77,9 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        Group {
+            LoginView()
+       
+        }
     }
 }
