@@ -11,6 +11,7 @@
 		D39F1B34283E0CC2004B1E31 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F1B33283E0CC2004B1E31 /* LogoView.swift */; };
 		D39F1B38283E2C7D004B1E31 /* CustomSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F1B37283E2C7D004B1E31 /* CustomSecureTextField.swift */; };
 		D39F1B3A283E30BA004B1E31 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F1B39283E30BA004B1E31 /* PasswordTextField.swift */; };
+		D39F1B3C283E3C52004B1E31 /* AuthenticationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F1B3B283E3C52004B1E31 /* AuthenticationButtonView.swift */; };
 		D3B6A3B0283CE5C4006DE578 /* ToDoSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6A3AF283CE5C4006DE578 /* ToDoSwiftUIApp.swift */; };
 		D3B6A3B2283CE5C4006DE578 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6A3B1283CE5C4006DE578 /* ContentView.swift */; };
 		D3B6A3B4283CE5C7006DE578 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3B6A3B3283CE5C7006DE578 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		D39F1B33283E0CC2004B1E31 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		D39F1B37283E2C7D004B1E31 /* CustomSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureTextField.swift; sourceTree = "<group>"; };
 		D39F1B39283E30BA004B1E31 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		D39F1B3B283E3C52004B1E31 /* AuthenticationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationButtonView.swift; sourceTree = "<group>"; };
 		D3B6A3AC283CE5C4006DE578 /* ToDoSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B6A3AF283CE5C4006DE578 /* ToDoSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoSwiftUIApp.swift; sourceTree = "<group>"; };
 		D3B6A3B1283CE5C4006DE578 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				D3B6A3CA283D1BB2006DE578 /* TextFields */,
 				D3B6A3C6283CECDA006DE578 /* BackgroundGradiantView.swift */,
 				D39F1B33283E0CC2004B1E31 /* LogoView.swift */,
+				D39F1B3B283E3C52004B1E31 /* AuthenticationButtonView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39F1B3C283E3C52004B1E31 /* AuthenticationButtonView.swift in Sources */,
 				D39F1B3A283E30BA004B1E31 /* PasswordTextField.swift in Sources */,
 				D39F1B32283E0626004B1E31 /* EmailTextField.swift in Sources */,
 				D39F1B38283E2C7D004B1E31 /* CustomSecureTextField.swift in Sources */,
