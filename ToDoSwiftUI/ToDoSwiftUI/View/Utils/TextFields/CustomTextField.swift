@@ -30,6 +30,7 @@ struct CustomTextField: View {
                 
                 TextField("",text: $text)
                     .autocapitalization(.none)
+                    .padding(.leading, 14)
                 
             }
         }
