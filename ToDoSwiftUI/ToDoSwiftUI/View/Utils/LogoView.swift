@@ -2,7 +2,7 @@
 //  LogoView.swift
 //  ToDoSwiftUI
 //
-//  Created by Kaushal Bhalara on 24/05/22.
+//  Created by Kaushal Bhalara on 25/05/22.
 //
 
 import SwiftUI
@@ -10,7 +10,8 @@ import SwiftUI
 struct LogoView: View {
     var body: some View {
        
-        VStack{
+        VStack(){
+            
             Image("LoginLogo")
                 .resizable()
                 .scaledToFit()
@@ -19,6 +20,7 @@ struct LogoView: View {
                 .foregroundColor(.white)
                 .font(.system(size: 25))
                 .fontWeight(.semibold)
+            
         }
     }
 }
