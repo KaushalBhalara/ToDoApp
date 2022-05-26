@@ -21,6 +21,9 @@
 		D3268789283F88E6004ED9F3 /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3268788283F88E6004ED9F3 /* TODO.swift */; };
 		D326878B283F899E004ED9F3 /* SelectedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D326878A283F899E004ED9F3 /* SelectedButton.swift */; };
 		D326878D283F8C0F004ED9F3 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D326878C283F8C0F004ED9F3 /* MockData.swift */; };
+		D326878F283F9286004ED9F3 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D326878E283F9286004ED9F3 /* AuthViewModel.swift */; };
+		D3268791283F92D3004ED9F3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D3268790283F92D3004ED9F3 /* FirebaseAuth */; };
+		D3268793283FA26C004ED9F3 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3268792283FA26C004ED9F3 /* DashboardView.swift */; };
 		D39F1B32283E0626004B1E31 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F1B31283E0626004B1E31 /* EmailTextField.swift */; };
 		D39F1B34283E0CC2004B1E31 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F1B33283E0CC2004B1E31 /* LogoView.swift */; };
 		D39F1B38283E2C7D004B1E31 /* CustomSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F1B37283E2C7D004B1E31 /* CustomSecureTextField.swift */; };
@@ -44,6 +47,8 @@
 		D3268788283F88E6004ED9F3 /* TODO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
 		D326878A283F899E004ED9F3 /* SelectedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedButton.swift; sourceTree = "<group>"; };
 		D326878C283F8C0F004ED9F3 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		D326878E283F9286004ED9F3 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		D3268792283FA26C004ED9F3 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		D39F1B31283E0626004B1E31 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		D39F1B33283E0CC2004B1E31 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		D39F1B37283E2C7D004B1E31 /* CustomSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureTextField.swift; sourceTree = "<group>"; };
@@ -72,6 +77,7 @@
 				D3268777283F78AD004ED9F3 /* FirebaseAnalyticsSwift in Frameworks */,
 				D3268775283F78AD004ED9F3 /* FirebaseAnalytics in Frameworks */,
 				D326877F283F78AD004ED9F3 /* FirebaseStorage in Frameworks */,
+				D3268791283F92D3004ED9F3 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +156,7 @@
 			children = (
 				D3B6A3C1283CEB7B006DE578 /* Authentication */,
 				D3B6A3C0283CEB70006DE578 /* Utils */,
+				D3268792283FA26C004ED9F3 /* DashboardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,6 +164,7 @@
 		D3B6A3BF283CEAC3006DE578 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D326878E283F9286004ED9F3 /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -217,6 +225,7 @@
 				D326877C283F78AD004ED9F3 /* FirebaseFunctions */,
 				D326877E283F78AD004ED9F3 /* FirebaseStorage */,
 				D3268786283F8808004ED9F3 /* FirebaseFirestoreSwift */,
+				D3268790283F92D3004ED9F3 /* FirebaseAuth */,
 			);
 			productName = ToDoSwiftUI;
 			productReference = D3B6A3AC283CE5C4006DE578 /* ToDoSwiftUI.app */;
@@ -284,6 +293,8 @@
 				D326878B283F899E004ED9F3 /* SelectedButton.swift in Sources */,
 				D39F1B32283E0626004B1E31 /* EmailTextField.swift in Sources */,
 				D3268789283F88E6004ED9F3 /* TODO.swift in Sources */,
+				D3268793283FA26C004ED9F3 /* DashboardView.swift in Sources */,
+				D326878F283F9286004ED9F3 /* AuthViewModel.swift in Sources */,
 				D39F1B38283E2C7D004B1E31 /* CustomSecureTextField.swift in Sources */,
 				D3B6A3CC283D1BDD006DE578 /* CustomTextField.swift in Sources */,
 				D3B6A3C7283CECDA006DE578 /* BackgroundGradiantView.swift in Sources */,
@@ -538,6 +549,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D3268773283F78AD004ED9F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		D3268790283F92D3004ED9F3 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3268773283F78AD004ED9F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

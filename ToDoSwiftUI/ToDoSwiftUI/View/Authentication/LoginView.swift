@@ -12,6 +12,8 @@ struct LoginView: View {
     @State var email = ""
     @State var password = ""
     
+    @EnvironmentObject var viewModel : AuthViewModel
+    
     var body: some View {
         NavigationView {
             ZStack{
@@ -42,7 +44,13 @@ struct LoginView: View {
                     }
                     Spacer()
                         .frame(height: 50)
-                    AuthenticationButtonView(text: "Sign In")
+                    
+                    Button{
+                        viewModel.login(withEmail: email, password: password)
+                    }label: {
+                        AuthenticationButtonView(text: "Sign In")
+                    }
+                   
                     
                     NavigationLink(destination: SignUpView()
                         .navigationBarHidden(true)) {

@@ -17,6 +17,8 @@ struct ToDoSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(AuthViewModel.shared)
         }
     }
+    
 }
