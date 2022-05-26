@@ -46,11 +46,11 @@ struct LoginView: View {
                     
                     NavigationLink(destination: SignUpView()
                         .navigationBarHidden(true)) {
-                
-                  
-                           
+                            
+                            
+                            
                             HStack(){
-                           
+                                
                                 Text("Don't have a account?")
                                     .font(.system(size: 15))
                                 Text("Sign Up")
@@ -61,12 +61,9 @@ struct LoginView: View {
                             .foregroundColor(.white)
                             .padding()
                             
-                            
-                        
-                     
-                    }
-
-
+                        }
+                    
+                    
                 }
                 .padding(.top, -100)
             }
@@ -79,7 +76,7 @@ struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             LoginView()
-       
+            
         }
     }
 }

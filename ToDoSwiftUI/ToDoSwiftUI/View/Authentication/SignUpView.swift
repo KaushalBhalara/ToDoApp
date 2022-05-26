@@ -8,8 +8,59 @@
 import SwiftUI
 
 struct SignUpView: View {
+    
+    @State var firstname = ""
+    @State var lastname = ""
+    @State var email = ""
+    @State var password = ""
+    @State var confirmPassword = ""
+    
+    @Environment(\.presentationMode) var mode
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            
+            BackgroundGradiantView()
+            
+            VStack{
+                LogoView()
+                    .padding(.bottom, 25)
+                
+                VStack(spacing:20){
+                    UserTextField(text: $firstname, placeholder: "First Name")
+                    UserTextField(text: $lastname, placeholder: "Last Name")
+                    EmailTextField(text: $email)
+                    PasswordTextField(text: $password, placeholder: "Password")
+                    PasswordTextField(text: $confirmPassword, placeholder: "Confirm Password")
+                }
+                .padding(.horizontal,25)
+                .padding(.bottom,25)
+                
+                Button{
+                    
+                }label: {
+                    AuthenticationButtonView(text: "Sign Up")
+                    
+                }
+                
+                Spacer()
+                
+                Button{
+                    mode.wrappedValue.dismiss()
+                }label: {
+                    
+                    HStack{
+                        Text("Already have an account?")
+                            .font(.system(size: 15))
+                        Text("Sign In")
+                            .font(.system(size: 15))
+                            .fontWeight(.bold)
+                    }
+                    .foregroundColor(.white)
+                }.padding(16)
+            }
+            .padding(.top,30)
+        }
     }
 }
 
