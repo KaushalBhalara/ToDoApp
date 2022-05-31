@@ -11,7 +11,7 @@ enum SelectedButton : String {
    
     
     
-    case All = "All"
+    case all = "All"
     case groceries = "Groceries"
     case work = "Work"
     case school = "School"

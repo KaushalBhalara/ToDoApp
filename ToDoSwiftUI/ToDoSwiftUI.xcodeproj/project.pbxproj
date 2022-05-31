@@ -24,6 +24,7 @@
 		D326878F283F9286004ED9F3 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D326878E283F9286004ED9F3 /* AuthViewModel.swift */; };
 		D3268791283F92D3004ED9F3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D3268790283F92D3004ED9F3 /* FirebaseAuth */; };
 		D3268793283FA26C004ED9F3 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3268792283FA26C004ED9F3 /* DashboardView.swift */; };
+		D33487C82840D875008019BB /* TODOViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33487C72840D875008019BB /* TODOViewModel.swift */; };
 		D39F1B32283E0626004B1E31 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F1B31283E0626004B1E31 /* EmailTextField.swift */; };
 		D39F1B34283E0CC2004B1E31 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F1B33283E0CC2004B1E31 /* LogoView.swift */; };
 		D39F1B38283E2C7D004B1E31 /* CustomSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F1B37283E2C7D004B1E31 /* CustomSecureTextField.swift */; };
@@ -49,6 +50,7 @@
 		D326878C283F8C0F004ED9F3 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		D326878E283F9286004ED9F3 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		D3268792283FA26C004ED9F3 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		D33487C72840D875008019BB /* TODOViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOViewModel.swift; sourceTree = "<group>"; };
 		D39F1B31283E0626004B1E31 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		D39F1B33283E0CC2004B1E31 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		D39F1B37283E2C7D004B1E31 /* CustomSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureTextField.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				D326878E283F9286004ED9F3 /* AuthViewModel.swift */,
+				D33487C72840D875008019BB /* TODOViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				D3B6A3C5283CEBB3006DE578 /* SignUpView.swift in Sources */,
 				D3B6A3C3283CEB97006DE578 /* LoginView.swift in Sources */,
 				D3268782283F7EE9004ED9F3 /* Constant.swift in Sources */,
+				D33487C82840D875008019BB /* TODOViewModel.swift in Sources */,
 				D39F1B34283E0CC2004B1E31 /* LogoView.swift in Sources */,
 				D3B6A3B2283CE5C4006DE578 /* ContentView.swift in Sources */,
 				D3B6A3B0283CE5C4006DE578 /* ToDoSwiftUIApp.swift in Sources */,

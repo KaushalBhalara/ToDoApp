@@ -46,6 +46,16 @@ struct LoginView: View {
                         .frame(height: 50)
                     
                     Button{
+                        if email.isEmpty
+                        {
+                            print("Email is Empty")
+                            return
+                        }
+                        if password.isEmpty
+                        {
+                            print("Password is Empty")
+                            return
+                        }
                         viewModel.login(withEmail: email, password: password)
                     }label: {
                         AuthenticationButtonView(text: "Sign In")
