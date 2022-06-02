@@ -38,6 +38,19 @@ struct SearchBarView: View {
                         .foregroundColor(.gray)
                 )
                 .transition(.move(edge: .trailing))
+            
+            if isSeaching{
+                Button(action: {
+                    isSeaching = false
+                    searchText = ""
+                }, label: {
+                    Text("Cancel")
+                        .foregroundColor(Color("lightBlue"))
+                        .padding(.trailing)
+                        .padding(.leading,0)
+                })
+                .transition(.move(edge: .trailing))
+            }
         }
     }
 }
