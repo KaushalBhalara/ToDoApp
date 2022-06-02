@@ -30,6 +30,11 @@
 		D33C81FC284770B700564AAA /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C81FB284770B700564AAA /* SearchBarView.swift */; };
 		D3962A8D28488D80002B1CE5 /* TODOButtonStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3962A8C28488D80002B1CE5 /* TODOButtonStack.swift */; };
 		D3962A8F2848963F002B1CE5 /* AddTODOLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3962A8E2848963F002B1CE5 /* AddTODOLogo.swift */; };
+		D3962A912848B4BA002B1CE5 /* TODOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3962A902848B4BA002B1CE5 /* TODOView.swift */; };
+		D3962A932848BAE3002B1CE5 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3962A922848BAE3002B1CE5 /* BlankView.swift */; };
+		D3962A952848BBBB002B1CE5 /* CreateTODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3962A942848BBBB002B1CE5 /* CreateTODO.swift */; };
+		D3962A972848BE82002B1CE5 /* TODOTextFileld.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3962A962848BE82002B1CE5 /* TODOTextFileld.swift */; };
+		D3962A992848C1D9002B1CE5 /* CustomTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3962A982848C1D9002B1CE5 /* CustomTextEditor.swift */; };
 		D39F1B32283E0626004B1E31 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F1B31283E0626004B1E31 /* EmailTextField.swift */; };
 		D39F1B34283E0CC2004B1E31 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F1B33283E0CC2004B1E31 /* LogoView.swift */; };
 		D39F1B38283E2C7D004B1E31 /* CustomSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F1B37283E2C7D004B1E31 /* CustomSecureTextField.swift */; };
@@ -59,6 +64,11 @@
 		D33C81FB284770B700564AAA /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		D3962A8C28488D80002B1CE5 /* TODOButtonStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOButtonStack.swift; sourceTree = "<group>"; };
 		D3962A8E2848963F002B1CE5 /* AddTODOLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTODOLogo.swift; sourceTree = "<group>"; };
+		D3962A902848B4BA002B1CE5 /* TODOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOView.swift; sourceTree = "<group>"; };
+		D3962A922848BAE3002B1CE5 /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
+		D3962A942848BBBB002B1CE5 /* CreateTODO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTODO.swift; sourceTree = "<group>"; };
+		D3962A962848BE82002B1CE5 /* TODOTextFileld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOTextFileld.swift; sourceTree = "<group>"; };
+		D3962A982848C1D9002B1CE5 /* CustomTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditor.swift; sourceTree = "<group>"; };
 		D39F1B31283E0626004B1E31 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		D39F1B33283E0CC2004B1E31 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		D39F1B37283E2C7D004B1E31 /* CustomSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureTextField.swift; sourceTree = "<group>"; };
@@ -169,6 +179,8 @@
 				D3B6A3C1283CEB7B006DE578 /* Authentication */,
 				D3B6A3C0283CEB70006DE578 /* Utils */,
 				D3268792283FA26C004ED9F3 /* DashboardView.swift */,
+				D3962A902848B4BA002B1CE5 /* TODOView.swift */,
+				D3962A942848BBBB002B1CE5 /* CreateTODO.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,6 +204,8 @@
 				D33C81FB284770B700564AAA /* SearchBarView.swift */,
 				D3962A8C28488D80002B1CE5 /* TODOButtonStack.swift */,
 				D3962A8E2848963F002B1CE5 /* AddTODOLogo.swift */,
+				D3962A922848BAE3002B1CE5 /* BlankView.swift */,
+				D3962A982848C1D9002B1CE5 /* CustomTextEditor.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -213,6 +227,7 @@
 				D39F1B31283E0626004B1E31 /* EmailTextField.swift */,
 				D39F1B39283E30BA004B1E31 /* PasswordTextField.swift */,
 				D326876F283F48B1004ED9F3 /* UserTextField.swift */,
+				D3962A962848BE82002B1CE5 /* TODOTextFileld.swift */,
 			);
 			path = TextFields;
 			sourceTree = "<group>";
@@ -305,6 +320,7 @@
 			files = (
 				D3268784283F7F9F004ED9F3 /* AppUser.swift in Sources */,
 				D39F1B3C283E3C52004B1E31 /* AuthenticationButtonView.swift in Sources */,
+				D3962A912848B4BA002B1CE5 /* TODOView.swift in Sources */,
 				D39F1B3A283E30BA004B1E31 /* PasswordTextField.swift in Sources */,
 				D326878D283F8C0F004ED9F3 /* MockData.swift in Sources */,
 				D3268770283F48B1004ED9F3 /* UserTextField.swift in Sources */,
@@ -317,12 +333,16 @@
 				D33C81FC284770B700564AAA /* SearchBarView.swift in Sources */,
 				D39F1B38283E2C7D004B1E31 /* CustomSecureTextField.swift in Sources */,
 				D3B6A3CC283D1BDD006DE578 /* CustomTextField.swift in Sources */,
+				D3962A972848BE82002B1CE5 /* TODOTextFileld.swift in Sources */,
+				D3962A992848C1D9002B1CE5 /* CustomTextEditor.swift in Sources */,
 				D3B6A3C7283CECDA006DE578 /* BackgroundGradiantView.swift in Sources */,
 				D3B6A3C5283CEBB3006DE578 /* SignUpView.swift in Sources */,
+				D3962A952848BBBB002B1CE5 /* CreateTODO.swift in Sources */,
 				D3B6A3C3283CEB97006DE578 /* LoginView.swift in Sources */,
 				D3268782283F7EE9004ED9F3 /* Constant.swift in Sources */,
 				D33487C82840D875008019BB /* TODOViewModel.swift in Sources */,
 				D39F1B34283E0CC2004B1E31 /* LogoView.swift in Sources */,
+				D3962A932848BAE3002B1CE5 /* BlankView.swift in Sources */,
 				D3B6A3B2283CE5C4006DE578 /* ContentView.swift in Sources */,
 				D3B6A3B0283CE5C4006DE578 /* ToDoSwiftUIApp.swift in Sources */,
 				D3962A8F2848963F002B1CE5 /* AddTODOLogo.swift in Sources */,
