@@ -49,6 +49,47 @@ struct DashboardView: View {
                         .padding(.top)
                 }
                 
+                ScrollView{
+                    VStack(spacing: 15){
+                        ForEach(viewModel.todosFiltered, id:\.id) { todo in
+                            if searchText == "" {
+                                TODOView(todo: TODO(ownerUid: todo.ownerUid, title: todo.title, description: todo.description, TODOType: todo.TODOType, completed: todo.completed, documentID: todo.documentID), viewModel: viewModel)
+                            }
+                            else
+                            {
+                                if todo.title.lowercased().contains(searchText.lowercased()) || todo.description.lowercased().contains(searchText.lowercased()){
+                                    TODOView(todo: TODO(ownerUid: todo.ownerUid, title: todo.title, description: todo.description, TODOType: todo.TODOType, completed: todo.completed, documentID: todo.documentID), viewModel: viewModel)
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .overlay(
+                VStack{
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Button{
+                            viewModel.showCreatTODOView = true
+                        }label: {
+                            Image(systemName: "plus")
+                                .padding()
+                                .background(Color("lightBlue"))
+                                .foregroundColor(.white)
+                                .font(.system(size: 30))
+                                .frame(width: 50, height: 50, alignment: .center)
+                                .cornerRadius(25)
+                                .shadow(color: .gray, radius: 1, x: 3, y: 1)
+                        }
+                        .padding()
+                    }
+                }
+            )
+            if viewModel.showCreatTODOView {
+                BlankView()
+                CreateTODOView(appuser: user, viewModel: viewModel)
             }
         }
     }

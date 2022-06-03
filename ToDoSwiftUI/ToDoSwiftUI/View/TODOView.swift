@@ -48,9 +48,8 @@ struct TODOView: View {
             }
             .padding(.leading,10 )
             Spacer()
-            
             Button{
-                
+                viewModel.deleteTODO(todoID: todo.documentID ?? "")
             }label: {
                 Image(systemName: "x.circle")
                     .foregroundColor(Color.red)

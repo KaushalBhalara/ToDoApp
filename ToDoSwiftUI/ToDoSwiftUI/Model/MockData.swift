@@ -9,6 +9,6 @@ import Foundation
 
 let appUser01 = AppUser(id: "1", uid: "1", firstName: "Kaushal", lastName: "Bhalara", email: "kaushalbhalra@webmyne.com")
 
-let mockData01 = TODO (id: "1", ownerID: "1", title: "Buy", description: "Today required", TODOType: "Home", completed: false)
-let mockData02 = TODO (id: "2", ownerID: "2", title: "Sell", description: "Tomorrow required", TODOType: "Work", completed: false)
-let mockData03 = TODO (id: "3", ownerID: "3", title: "Free", description: "No Work", TODOType: "School", completed: false)
+let mockData01 = TODO (id: "1", ownerUid: "1", title: "Buy", description: "Today required", TODOType: "Home", completed: false)
+let mockData02 = TODO (id: "2", ownerUid: "2", title: "Sell", description: "Tomorrow required", TODOType: "Work", completed: false)
+let mockData03 = TODO (id: "3", ownerUid: "3", title: "Free", description: "No Work", TODOType: "School", completed: false)

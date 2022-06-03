@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CreateTODO: View {
+struct CreateTODOView: View {
     
     let appuser : AppUser
     
@@ -32,7 +32,7 @@ struct CreateTODO: View {
             
             HStack{
                 Button{
-                    viewModel.uploadTODO(todo: TODO(ownerID: appuser.id ?? "", title: title, description: TODOdescription, TODOType: viewModel.filterTODOSelected == .all ? "Extra" : viewModel.filterTODOSelected.rawValue, completed: false))
+                    viewModel.uploadTODO(todo: TODO(ownerUid: appuser.id ?? "", title: title, description: TODOdescription, TODOType: viewModel.filterTODOSelected == .all ? "Extra" : viewModel.filterTODOSelected.rawValue, completed: false))
                     viewModel.showCreatTODOView =  false
                 }label: {
                     CreateTODOButton()
@@ -48,7 +48,7 @@ struct CreateTODO: View {
             
             
         }
-        .frame(width: UIScreen.main.bounds.size.width - 100, height: 350, alignment: .center)
+        .frame(width: UIScreen.main.bounds.size.width - 80, height: 380, alignment: .center)
         .background(Color(.systemGray5))
         .cornerRadius(25)
     }
@@ -56,7 +56,7 @@ struct CreateTODO: View {
 
 struct CreateTODO_Previews: PreviewProvider {
     static var previews: some View {
-        CreateTODO(appuser: appUser01, viewModel: TODOViewModel())
+        CreateTODOView(appuser: appUser01, viewModel: TODOViewModel())
     }
 }
 
@@ -66,7 +66,7 @@ struct CreateTODOButton : View {
         Text("Create")
             .font(.headline)
             .foregroundColor(Color.white)
-            .frame(width: 150, height: 40, alignment: .center)
+            .frame(width: 120, height: 40, alignment: .center)
             .background(Color.blue.opacity(0.6))
             .clipShape(Capsule())
         
@@ -78,7 +78,7 @@ struct CancelTODOButton : View {
         Text("Cancel")
             .font(.headline)
             .foregroundColor(Color.white)
-            .frame(width: 100, height: 40, alignment: .center)
+            .frame(width: 120, height: 40, alignment: .center)
             .background(Color.red.opacity(0.6))
             .clipShape(Capsule())
         
