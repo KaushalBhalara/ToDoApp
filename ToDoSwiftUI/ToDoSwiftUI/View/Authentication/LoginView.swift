@@ -7,12 +7,18 @@
 
 import SwiftUI
 
+enum ActiveAlert {
+    case email, password
+}
+
 struct LoginView: View {
     
     @State var email = ""
     @State var password = ""
     
     @EnvironmentObject var viewModel : AuthViewModel
+    @State private var showAlert = false
+    @State private var showingAlert_Login : ActiveAlert = .email
     
     var body: some View {
         NavigationView {
@@ -48,19 +54,36 @@ struct LoginView: View {
                     Button{
                         if email.isEmpty
                         {
-                            print("Email is Empty")
+                            self.showingAlert_Login = .email
+                            self.showAlert = true
                             return
                         }
                         if password.isEmpty
                         {
-                            print("Password is Empty")
+                            self.showingAlert_Login = .password
+                            self.showAlert = true
                             return
                         }
                         viewModel.login(withEmail: email, password: password)
                     }label: {
                         AuthenticationButtonView(text: "Sign In")
                     }
-                   
+                    .alert(isPresented:$showAlert) {
+                        
+                        switch self.showingAlert_Login {
+                        case .email:
+                            return Alert(
+                                title: Text("Alert"),
+                                message: Text("Please Insert email"),
+                                dismissButton: .default(Text("Done")))
+                        case .password:
+                            return Alert(
+                                title: Text("Alert"),
+                                message: Text("Please Insert Password"),
+                                dismissButton: .default(Text("Done")))
+                        }
+                                
+                    }
                     
                     NavigationLink(destination: SignUpView()
                         .navigationBarHidden(true)) {

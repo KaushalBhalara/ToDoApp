@@ -18,6 +18,8 @@ struct CreateTODOView: View {
     
     @ObservedObject var viewModel = TODOViewModel()
     
+    @State private var showingAlert = false
+    
     var body: some View {
         VStack{
             
@@ -32,11 +34,25 @@ struct CreateTODOView: View {
             
             HStack{
                 Button{
-                    viewModel.uploadTODO(todo: TODO(ownerUid: appuser.id ?? "", title: title, description: TODOdescription, TODOType: viewModel.filterTODOSelected == .all ? "Extra" : viewModel.filterTODOSelected.rawValue, completed: false))
-                    viewModel.showCreatTODOView =  false
+                    if title != ""{
+                        viewModel.uploadTODO(todo: TODO(ownerUid: appuser.id ?? "", title: title, description: TODOdescription, TODOType: viewModel.filterTODOSelected == .all ? "Extra" : viewModel.filterTODOSelected.rawValue, completed: false))
+                        viewModel.showCreatTODOView =  false
+                        
+                    }
+                    else{
+                        showingAlert = true
+                    }
+                    
                 }label: {
                     CreateTODOButton()
                 }
+                .alert(isPresented:$showingAlert) {
+                            Alert(
+                                title: Text("Alert"),
+                                message: Text("Please Insert Title"),
+                                dismissButton: .default(Text("Done"))
+                            )
+                        }
                 
                 Button{
                     viewModel.showCreatTODOView =  false

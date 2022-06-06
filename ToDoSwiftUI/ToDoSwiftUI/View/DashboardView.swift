@@ -88,7 +88,7 @@ struct DashboardView: View {
                 }
             )
             if viewModel.showCreatTODOView {
-                BlankView()
+                BlankView(viewModel: viewModel)
                 CreateTODOView(appuser: user, viewModel: viewModel)
             }
         }

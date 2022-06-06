@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BlankView: View {
+    @ObservedObject var viewModel = TODOViewModel()
+    
     var body: some View {
         VStack{
             Spacer()
@@ -16,9 +18,9 @@ struct BlankView: View {
         .background(Color.black)
         .opacity(0.5)
         .edgesIgnoringSafeArea(.all)
-        .onTapGesture {
-            
-        }
+        .onTapGesture(count: 1, perform: {
+            viewModel.showCreatTODOView =  false
+        })
     }
 }
 
