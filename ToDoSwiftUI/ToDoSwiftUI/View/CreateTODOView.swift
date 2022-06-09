@@ -19,54 +19,71 @@ struct CreateTODOView: View {
     @ObservedObject var viewModel = TODOViewModel()
     
     @State private var showingAlert = false
+
+    @State var isHideLoader: Bool = true
     
     var body: some View {
-        VStack{
-            
-            TODOButtonStack(viewModel: viewModel)
-                .padding()
-                .padding(.top)
-            
-            TODOTextFileld(text: $title, placholder: "Title")
-                .padding([.horizontal,.bottom])
-            CustomTextEditor(text: $TODOdescription, placeholder: Text("Description ..."), imageName: "line.3.horizontal", foregroundColor: .gray)
-                .padding([.horizontal,.bottom])
-            
-            HStack{
-                Button{
-                    if title != ""{
-                        viewModel.uploadTODO(todo: TODO(ownerUid: appuser.id ?? "", title: title, description: TODOdescription, TODOType: viewModel.filterTODOSelected == .all ? "Extra" : viewModel.filterTODOSelected.rawValue, completed: false))
-                        viewModel.showCreatTODOView =  false
-                        
-                    }
-                    else{
-                        showingAlert = true
-                    }
-                    
-                }label: {
-                    CreateTODOButton()
-                }
-                .alert(isPresented:$showingAlert) {
-                            Alert(
-                                title: Text("Alert"),
-                                message: Text("Please Insert Title"),
-                                dismissButton: .default(Text("Done"))
-                            )
-                        }
+        ZStack {
+            VStack{
                 
-                Button{
-                    viewModel.showCreatTODOView =  false
-                }label: {
-                    CancelTODOButton()
+                
+                TODOButtonStack(viewModel: viewModel)
+                    .padding()
+                    .padding(.top)
+               
+                TODOTextFileld(text: $title, placholder: "Title")
+                    .padding([.horizontal,.bottom])
+                CustomTextEditor(text: $TODOdescription, placeholder: Text("Description ..."), imageName: "line.3.horizontal", foregroundColor: .gray)
+                    .padding([.horizontal,.bottom])
+
+                HStack{
+                    Button{
+                        if title != ""{
+                            self.isHideLoader = false
+                            viewModel.uploadTODO(todo: TODO(ownerUid: appuser.id ?? "", title: title, description: TODOdescription, TODOType: viewModel.filterTODOSelected == .all ? "Extra" : viewModel.filterTODOSelected.rawValue, completed: false))
+                            viewModel.showCreatTODOView =  false
+                            self.isHideLoader = true
+                        }
+                        else{
+                            showingAlert = true
+                            print(viewModel.selectedTODO)
+                            print(viewModel.selectedTODO[0].title)
+                        }
+                        
+                    }label: {
+                        CreateTODOButton()
+                    }
+                    .alert(isPresented:$showingAlert) {
+                                Alert(
+                                    title: Text("Alert"),
+                                    message: Text("Please Insert Title"),
+                                    dismissButton: .default(Text("Done"))
+                                )
+                            }
+                    
+                    Button{
+                        viewModel.showCreatTODOView =  false
+                    }label: {
+                        CancelTODOButton()
+                    }
                 }
+                Spacer()
+                
+                
             }
-            Spacer()
+            .frame(width: UIScreen.main.bounds.size.width - 80, height: 380, alignment: .center)
+            .background(Color(.systemGray5))
+            .cornerRadius(25)
+            VStack{
+                if self.isHideLoader == false{
+                    LoaderView(tintColor:Color("lightBlue"), scaleSize: 2.0).padding().hidden(isHideLoader)
+                }
+               
+            }
             
             
         }
-        .frame(width: UIScreen.main.bounds.size.width - 80, height: 380, alignment: .center)
-        .background(Color(.systemGray5))
-        .cornerRadius(25)
+        
     }
 }
 
@@ -98,5 +115,14 @@ struct CancelTODOButton : View {
             .background(Color.red.opacity(0.6))
             .clipShape(Capsule())
         
+    }
+}
+
+extension View {
+    @ViewBuilder func hidden(_ shouldHide: Bool) -> some View {
+        switch shouldHide {
+        case true: self.hidden()
+        case false: self
+        }
     }
 }

@@ -48,6 +48,7 @@
 		D3B6A3C5283CEBB3006DE578 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6A3C4283CEBB3006DE578 /* SignUpView.swift */; };
 		D3B6A3C7283CECDA006DE578 /* BackgroundGradiantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6A3C6283CECDA006DE578 /* BackgroundGradiantView.swift */; };
 		D3B6A3CC283D1BDD006DE578 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B6A3CB283D1BDD006DE578 /* CustomTextField.swift */; };
+		D3D08D032850CC4F008BB1AD /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D08D022850CC4F008BB1AD /* LoaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		D3B6A3C4283CEBB3006DE578 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		D3B6A3C6283CECDA006DE578 /* BackgroundGradiantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradiantView.swift; sourceTree = "<group>"; };
 		D3B6A3CB283D1BDD006DE578 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		D3D08D022850CC4F008BB1AD /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				D3962A8E2848963F002B1CE5 /* AddTODOLogo.swift */,
 				D3962A922848BAE3002B1CE5 /* BlankView.swift */,
 				D3962A982848C1D9002B1CE5 /* CustomTextEditor.swift */,
+				D3D08D022850CC4F008BB1AD /* LoaderView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				D39F1B3C283E3C52004B1E31 /* AuthenticationButtonView.swift in Sources */,
 				D3962A912848B4BA002B1CE5 /* TODOView.swift in Sources */,
 				D39F1B3A283E30BA004B1E31 /* PasswordTextField.swift in Sources */,
+				D3D08D032850CC4F008BB1AD /* LoaderView.swift in Sources */,
 				D326878D283F8C0F004ED9F3 /* MockData.swift in Sources */,
 				D3268770283F48B1004ED9F3 /* UserTextField.swift in Sources */,
 				D326878B283F899E004ED9F3 /* SelectedButton.swift in Sources */,
@@ -402,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -456,7 +460,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -474,6 +478,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ToDoSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 4NS8D3NZ2F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -502,6 +507,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ToDoSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 4NS8D3NZ2F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

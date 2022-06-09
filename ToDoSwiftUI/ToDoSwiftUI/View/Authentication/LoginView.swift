@@ -20,6 +20,8 @@ struct LoginView: View {
     @State private var showAlert = false
     @State private var showingAlert_Login : ActiveAlert = .email
     
+    @State var isHideLoader: Bool = true
+    
     var body: some View {
         NavigationView {
             ZStack{
@@ -52,19 +54,23 @@ struct LoginView: View {
                         .frame(height: 50)
                     
                     Button{
+                        self.isHideLoader = false
                         if email.isEmpty
                         {
                             self.showingAlert_Login = .email
                             self.showAlert = true
+                            self.isHideLoader = true
                             return
                         }
                         if password.isEmpty
                         {
                             self.showingAlert_Login = .password
                             self.showAlert = true
+                            self.isHideLoader = true
                             return
                         }
                         viewModel.login(withEmail: email, password: password)
+//                        self.isHideLoader = true
                     }label: {
                         AuthenticationButtonView(text: "Sign In")
                     }
@@ -107,6 +113,11 @@ struct LoginView: View {
                     
                 }
                 .padding(.top, -100)
+                VStack{
+                    if self.isHideLoader == false{
+                        LoaderView(tintColor:Color(.white), scaleSize: 2.0).padding().hidden(isHideLoader)
+                    }
+                }
             }
         }
         

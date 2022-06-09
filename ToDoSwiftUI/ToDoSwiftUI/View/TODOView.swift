@@ -47,6 +47,11 @@ struct TODOView: View {
                 
             }
             .padding(.leading,10 )
+            .onTapGesture(count: 1, perform: {
+                viewModel.showCreatTODOView =  true
+                viewModel.selectedTODO =  viewModel.todos.filter { $0.documentID == todo.documentID }
+                
+            })
             Spacer()
             Button{
                 viewModel.deleteTODO(todoID: todo.documentID ?? "")

@@ -13,6 +13,8 @@ struct DashboardView: View {
     
     @State var searchText: String = ""
     @ObservedObject var viewModel = TODOViewModel()
+    @State private var showingAlert = false
+
     
     var body: some View {
         ZStack
@@ -30,12 +32,23 @@ struct DashboardView: View {
                     HStack{
                         Spacer()
                         Button{
-                            AuthViewModel.shared.signout()
+                            self.showingAlert = true
+//                            AuthViewModel.shared.signout()
                         }label: {
                             Text("Logout")
                                 .foregroundColor(Color(.systemGray))
                         }
                         .padding(.trailing)
+                        .alert(isPresented:$showingAlert) {
+                                    Alert(
+                                        title: Text("Are you sure you want to Logout?"),
+                                        message: nil,
+                                        primaryButton: .destructive(Text("Logout")) {
+                                            AuthViewModel.shared.signout()
+                                        },
+                                        secondaryButton: .cancel()
+                                    )
+                                }
                     }
                 }
                 SearchBarView(searchText: $searchText)

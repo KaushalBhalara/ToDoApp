@@ -27,6 +27,8 @@ struct SignUpView: View {
     
     @EnvironmentObject var viewModel : AuthViewModel
     
+    @State var isHideLoader: Bool = true
+    
     var body: some View {
         ZStack{
             
@@ -47,37 +49,45 @@ struct SignUpView: View {
                 .padding(.bottom,25)
                 
                 Button{
+                    self.isHideLoader = false
                     if firstname.isEmpty{
                         SingupAlert = .fname
+                        self.isHideLoader = true
                         showAlert = true
                         return
                     }
                     if lastname.isEmpty{
                         SingupAlert = .lname
+                        self.isHideLoader = true
                         showAlert = true
                         return
                     }
                     if email.isEmpty{
                         SingupAlert = .email
+                        self.isHideLoader = true
                         showAlert = true
                         return
                     }
                     if password.isEmpty {
                         SingupAlert =  .password
+                        self.isHideLoader = true
                         showAlert = true
                         return
                     }
                     if confirmPassword.isEmpty {
                         SingupAlert =  .cpassword
+                        self.isHideLoader = true
                         showAlert = true
                         return
                     }
                     if password != confirmPassword {
                         SingupAlert =  .passmatch
+                        self.isHideLoader = true
                         showAlert = true
                         return
                     }
                     viewModel.register(withEmail: email, password: password, firstName: firstname, lastName: lastname)
+//                    self.isHideLoader = true
                 }label: {
                     AuthenticationButtonView(text: "Sign Up")
                     
@@ -136,6 +146,11 @@ struct SignUpView: View {
                 }.padding(16)
             }
             .padding(.top,30)
+            VStack{
+                if self.isHideLoader == false{
+                    LoaderView(tintColor:Color(.white), scaleSize: 2.0).padding().hidden(isHideLoader)
+                }
+            }
         }
     }
 }

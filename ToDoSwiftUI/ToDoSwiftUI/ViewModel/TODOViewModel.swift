@@ -15,7 +15,7 @@ class TODOViewModel : ObservableObject {
     @Published var showCreatTODOView : Bool = false
     @Published var filterTODOSelected : SelectedButton = .all
     @Published var todosFiltered = [TODO]()
-    
+    @Published var selectedTODO = [TODO]()
     
     init() {
         
@@ -104,5 +104,6 @@ class TODOViewModel : ObservableObject {
             self.loadTODOs()
         }
     }
+    
 }
 
