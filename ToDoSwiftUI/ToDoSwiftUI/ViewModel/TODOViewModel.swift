@@ -105,5 +105,21 @@ class TODOViewModel : ObservableObject {
         }
     }
     
+    func updateTODO  (todoID:String, todo:TODO){
+        
+        guard let uid = AuthViewModel.shared.userSession?.uid else { return}
+        
+        COLLECTION_USERS.document(uid).collection("to-dos").document(todoID).updateData(["title":todo.title,
+                                                                                         "description":todo.description,
+                                                                                         "TODOType":todo.TODOType]){ error in
+            if let error = error {
+                print("updateTODO \(error.localizedDescription)")
+                return
+            }
+            
+            self.loadTODOs()
+        }
+    }
+    
 }
 

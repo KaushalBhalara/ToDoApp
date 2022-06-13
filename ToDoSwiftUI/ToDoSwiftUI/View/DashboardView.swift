@@ -86,6 +86,7 @@ struct DashboardView: View {
                         Spacer()
                         Button{
                             viewModel.showCreatTODOView = true
+                            viewModel.selectedTODO = [TODO]()
                         }label: {
                             Image(systemName: "plus")
                                 .padding()
@@ -102,7 +103,7 @@ struct DashboardView: View {
             )
             if viewModel.showCreatTODOView {
                 BlankView(viewModel: viewModel)
-                CreateTODOView(appuser: user, viewModel: viewModel)
+                CreateTODOView(appuser: user, title: !viewModel.selectedTODO.isEmpty ? viewModel.selectedTODO[0].title : "", TODOdescription: !viewModel.selectedTODO.isEmpty ? viewModel.selectedTODO[0].description : "" , viewModel: viewModel)
             }
         }
     }

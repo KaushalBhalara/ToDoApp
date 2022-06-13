@@ -37,32 +37,60 @@ struct CreateTODOView: View {
                     .padding([.horizontal,.bottom])
 
                 HStack{
-                    Button{
-                        if title != ""{
-                            self.isHideLoader = false
-                            viewModel.uploadTODO(todo: TODO(ownerUid: appuser.id ?? "", title: title, description: TODOdescription, TODOType: viewModel.filterTODOSelected == .all ? "Extra" : viewModel.filterTODOSelected.rawValue, completed: false))
-                            viewModel.showCreatTODOView =  false
-                            self.isHideLoader = true
-                        }
-                        else{
-                            showingAlert = true
-                            print(viewModel.selectedTODO)
-                            print(viewModel.selectedTODO[0].title)
-                        }
-                        
-                    }label: {
-                        CreateTODOButton()
-                    }
-                    .alert(isPresented:$showingAlert) {
-                                Alert(
-                                    title: Text("Alert"),
-                                    message: Text("Please Insert Title"),
-                                    dismissButton: .default(Text("Done"))
-                                )
+                    if viewModel.selectedTODO.isEmpty{
+                        Button{
+                            if title != ""{
+                                self.isHideLoader = false
+                                viewModel.uploadTODO(todo: TODO(ownerUid: appuser.id ?? "", title: title, description: TODOdescription, TODOType: viewModel.filterTODOSelected == .all ? "Extra" : viewModel.filterTODOSelected.rawValue, completed: false))
+                                viewModel.showCreatTODOView =  false
+                                self.isHideLoader = true
                             }
+                            else{
+                                showingAlert = true
+//                                print(viewModel.selectedTODO)
+//                                print(viewModel.selectedTODO[0].title)
+                            }
+                            
+                        }label: {
+                            CreateTODOButton()
+                        }
+                        .alert(isPresented:$showingAlert) {
+                                    Alert(
+                                        title: Text("Alert"),
+                                        message: Text("Please Insert Title"),
+                                        dismissButton: .default(Text("Done"))
+                                    )
+                                }
+                    }
+                    else{
+                        Button{
+                            if title != ""{
+                                
+                                viewModel.updateTODO(todoID: viewModel.selectedTODO[0].documentID ?? "" , todo:  TODO(ownerUid: appuser.id ?? "", title: title, description: TODOdescription, TODOType: viewModel.filterTODOSelected == .all ? "Extra" : viewModel.filterTODOSelected.rawValue, completed: false))
+                                viewModel.showCreatTODOView =  false
+                            }
+                            else
+                            {
+                                showingAlert = true
+                            }
+//
+                        }label: {
+                            UpdateTODOButton()
+                        }
+                        .alert(isPresented:$showingAlert) {
+                                    Alert(
+                                        title: Text("Alert"),
+                                        message: Text("Please Insert Title"),
+                                        dismissButton: .default(Text("Done"))
+                                    )
+                                }
+                    }
+                    
                     
                     Button{
+                        
                         viewModel.showCreatTODOView =  false
+                        
                     }label: {
                         CancelTODOButton()
                     }
@@ -97,6 +125,18 @@ struct CreateTODO_Previews: PreviewProvider {
 struct CreateTODOButton : View {
     var body: some View {
         Text("Create")
+            .font(.headline)
+            .foregroundColor(Color.white)
+            .frame(width: 120, height: 40, alignment: .center)
+            .background(Color.blue.opacity(0.6))
+            .clipShape(Capsule())
+        
+    }
+}
+
+struct UpdateTODOButton : View {
+    var body: some View {
+        Text("Update")
             .font(.headline)
             .foregroundColor(Color.white)
             .frame(width: 120, height: 40, alignment: .center)
