@@ -14,6 +14,7 @@ struct DashboardView: View {
     @State var searchText: String = ""
     @ObservedObject var viewModel = TODOViewModel()
     @State private var showingAlert = false
+    @State private var showingProfile = false
 
     
     var body: some View {
@@ -22,7 +23,7 @@ struct DashboardView: View {
             VStack{
                 HStack{
                     Spacer()
-                    Text("- All Done -")
+                    Text("\(user.firstName)" + " " + "\( user.lastName)")
                         .fontWeight(.semibold)
                         .font(.system(size: 24))
                     Spacer()
@@ -30,6 +31,18 @@ struct DashboardView: View {
                 }
                 .overlay{
                     HStack{
+                        Button{
+                            self.showingProfile = true
+                            
+//                            AuthViewModel.shared.signout()
+                        }label: {
+                            Text("Profile")
+                                .foregroundColor(Color(.systemGray))
+                        }
+                        .padding(.leading)
+                        .sheet(isPresented: $showingProfile) {
+                            ProfileView(user: user)
+                        }
                         Spacer()
                         Button{
                             self.showingAlert = true

@@ -10,6 +10,7 @@ import SwiftUI
 struct TODOView: View {
     
     var todo:TODO
+    @State private var showingAlert = false
     @ObservedObject var viewModel : TODOViewModel
     
     var body: some View {
@@ -54,13 +55,24 @@ struct TODOView: View {
             })
             Spacer()
             Button{
-                viewModel.deleteTODO(todoID: todo.documentID ?? "")
+               
+                self.showingAlert = true
             }label: {
                 Image(systemName: "x.circle")
                     .foregroundColor(Color.red)
                     .frame(width: 22, height: 22, alignment: .center)
                 
             }
+            .alert(isPresented:$showingAlert) {
+                        Alert(
+                            title: Text("Are you want to Delete?"),
+                            message: nil,
+                            primaryButton: .destructive(Text("Delete")) {
+                                viewModel.deleteTODO(todoID: todo.documentID ?? "")
+                            },
+                            secondaryButton: .cancel()
+                        )
+                    }
         }
         .padding(20)
         .frame(width: UIScreen.main.bounds.size.width - 25, height: 75, alignment: .center)
